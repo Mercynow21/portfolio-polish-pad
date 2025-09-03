@@ -102,6 +102,11 @@
     scroll-behavior: smooth;
   }
 
+  /* Ensure sections are properly positioned for navigation */
+  section[id] {
+    scroll-margin-top: 100px;
+  }
+
   /* Custom scrollbar */
   ::-webkit-scrollbar {
     width: 6px;

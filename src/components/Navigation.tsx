@@ -25,6 +25,25 @@ const Navigation = () => {
     { label: "Contact", href: "#contact" },
   ];
 
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    const targetId = href.substring(1);
+    const targetElement = document.getElementById(targetId);
+    
+    if (targetElement) {
+      const navHeight = 80; // Account for fixed navigation height
+      const targetPosition = targetElement.offsetTop - navHeight;
+      
+      window.scrollTo({
+        top: targetPosition,
+        behavior: 'smooth'
+      });
+    }
+    
+    // Close mobile menu if open
+    setIsMobileMenuOpen(false);
+  };
+
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled 
@@ -44,13 +63,16 @@ const Navigation = () => {
               <a
                 key={item.label}
                 href={item.href}
-                className="text-muted-foreground hover:text-primary transition-colors duration-200 font-medium"
+                onClick={(e) => handleNavClick(e, item.href)}
+                className="text-muted-foreground hover:text-primary transition-colors duration-200 font-medium cursor-pointer"
               >
                 {item.label}
               </a>
             ))}
-            <Button variant="hero" size="sm">
-              Resume
+            <Button variant="hero" size="sm" asChild>
+              <a href="#contact" onClick={(e) => handleNavClick(e, "#contact")}>
+                Resume
+              </a>
             </Button>
           </div>
 
@@ -73,14 +95,16 @@ const Navigation = () => {
                 <a
                   key={item.label}
                   href={item.href}
-                  className="text-muted-foreground hover:text-primary transition-colors duration-200 font-medium"
-                  onClick={() => setIsMobileMenuOpen(false)}
+                  onClick={(e) => handleNavClick(e, item.href)}
+                  className="text-muted-foreground hover:text-primary transition-colors duration-200 font-medium cursor-pointer"
                 >
                   {item.label}
                 </a>
               ))}
-              <Button variant="hero" size="sm" className="self-start">
-                Resume
+              <Button variant="hero" size="sm" className="self-start" asChild>
+                <a href="#contact" onClick={(e) => handleNavClick(e, "#contact")}>
+                  Resume
+                </a>
               </Button>
             </div>
           </div>
