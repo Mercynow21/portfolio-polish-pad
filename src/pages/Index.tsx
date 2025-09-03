@@ -2,7 +2,10 @@ import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Skills from "@/components/Skills";
+import Experience from "@/components/Experience";
+import Education from "@/components/Education";
 import Projects from "@/components/Projects";
+import Achievements from "@/components/Achievements";
 import Contact from "@/components/Contact";
 
 const Index = () => {
@@ -12,7 +15,10 @@ const Index = () => {
       <Hero />
       <About />
       <Skills />
+      <Experience />
+      <Education />
       <Projects />
+      <Achievements />
       <Contact />
       
       {/* Footer */}
@@ -22,7 +28,7 @@ const Index = () => {
             © 2024 Mehiret Abdissa. Built with React, TypeScript & Tailwind CSS.
           </p>
           <p className="text-muted-foreground text-sm mt-2">
-            Crafted with passion for AI development and user-centered design.
+            Junior AI Developer & Prompt Engineer - Ready for new opportunities.
           </p>
         </div>
       </footer>
