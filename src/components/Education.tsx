@@ -14,13 +14,9 @@ const Education = () => {
       description: "Focused on software engineering, data structures, algorithms, and emerging technologies with particular interest in artificial intelligence and machine learning.",
       relevantCourses: [
         "Data Structures & Algorithms",
-        "Software Engineering",
         "Database Systems", 
         "Web Development",
-        "Machine Learning Fundamentals",
-        "Computer Networks",
-        "Software Design Patterns",
-        "Project Management"
+        "Machine Learning Fundamentals"
       ],
       projects: [
         {
