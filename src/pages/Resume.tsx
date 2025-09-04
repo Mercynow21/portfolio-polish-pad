@@ -19,36 +19,57 @@ import { useState } from "react";
 const Resume = () => {
   const [copied, setCopied] = useState(false);
 
-  // SEO optimization
+  // SEO optimization - Update document head
   useEffect(() => {
+    const originalTitle = document.title;
+    const originalDescription = document.querySelector('meta[name="description"]')?.getAttribute('content');
+    const originalOGTitle = document.querySelector('meta[property="og:title"]')?.getAttribute('content');
+    const originalOGDescription = document.querySelector('meta[property="og:description"]')?.getAttribute('content');
+
+    // Update page title and meta tags for resume
     document.title = `${resumeData.contact.name} - Resume | ${resumeData.contact.role}`;
     
-    // Meta description
+    // Update meta description
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
       metaDescription.setAttribute('content', 
-        `Resume of ${resumeData.contact.name}, ${resumeData.contact.role}. ${resumeData.summary.substring(0, 120)}...`
+        `Professional resume of ${resumeData.contact.name}, ${resumeData.contact.role}. ${resumeData.summary.substring(0, 120)}...`
       );
     }
 
-    // Open Graph tags
+    // Update Open Graph tags
     const ogTitle = document.querySelector('meta[property="og:title"]');
     const ogDescription = document.querySelector('meta[property="og:description"]');
-    const ogImage = document.querySelector('meta[property="og:image"]');
+    const ogURL = document.querySelector('meta[property="og:url"]');
     
-    if (ogTitle) ogTitle.setAttribute('content', `${resumeData.contact.name} - ${resumeData.contact.role}`);
+    if (ogTitle) ogTitle.setAttribute('content', `${resumeData.contact.name} - Resume`);
     if (ogDescription) ogDescription.setAttribute('content', resumeData.summary);
-    if (ogImage) ogImage.setAttribute('content', `${window.location.origin}/resume-preview.jpg`);
+    if (ogURL) ogURL.setAttribute('content', `${window.location.origin}/resume`);
 
-    // Twitter Card tags
+    // Update Twitter Card tags
     const twitterTitle = document.querySelector('meta[name="twitter:title"]');
     const twitterDescription = document.querySelector('meta[name="twitter:description"]');
     
-    if (twitterTitle) twitterTitle.setAttribute('content', `${resumeData.contact.name} - ${resumeData.contact.role}`);
-    if (twitterDescription) twitterDescription.setAttribute('content', resumeData.summary);
+    if (twitterTitle) twitterTitle.setAttribute('content', `${resumeData.contact.name} - Resume`);
+    if (twitterDescription) twitterDescription.setAttribute('content', resumeData.summary.substring(0, 160));
+
+    // Cleanup on unmount
+    return () => {
+      document.title = originalTitle;
+      if (originalDescription && metaDescription) {
+        metaDescription.setAttribute('content', originalDescription);
+      }
+      if (originalOGTitle && ogTitle) {
+        ogTitle.setAttribute('content', originalOGTitle);
+      }
+      if (originalOGDescription && ogDescription) {
+        ogDescription.setAttribute('content', originalOGDescription);
+      }
+    };
   }, []);
 
   const handlePrint = () => {
+    // Optimize for printing
     window.print();
   };
 
@@ -59,6 +80,15 @@ const Resume = () => {
       setTimeout(() => setCopied(false), 2000);
     } catch (err) {
       console.error('Failed to copy link:', err);
+      // Fallback for older browsers
+      const textArea = document.createElement('textarea');
+      textArea.value = window.location.href;
+      document.body.appendChild(textArea);
+      textArea.select();
+      document.execCommand('copy');
+      document.body.removeChild(textArea);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
     }
   };
 

@@ -7,18 +7,90 @@
     <meta name="description" content="Junior AI Developer & Prompt Engineer specializing in LLM integration, human-centered AI solutions, and modern web development." />
     <meta name="author" content="Mehiret Abdissa" />
 
-    <meta property="og:title" content="Mehiret Abdissa - AI Developer Portfolio" />
-    <meta property="og:description" content="Junior AI Developer & Prompt Engineer specializing in LLM integration, human-centered AI solutions, and modern web development." />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <!-- Resume-specific meta tags -->
+    <meta name="keywords" content="AI Developer, Prompt Engineer, LLM Integration, React, TypeScript, Python, OpenAI API" />
+    <meta name="robots" content="index, follow" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="profile" />
+    <meta property="og:title" content="Mehiret Abdissa - Junior AI Developer & Prompt Engineer" />
+    <meta property="og:description" content="Entry-level AI developer passionate about bridging human intelligence and artificial intelligence. Specialized in LLM integration and prompt engineering with practical AI solutions." />
+    <meta property="og:url" content="https://mehiret-portfolio.vercel.app/" />
+    <meta property="og:site_name" content="Mehiret Abdissa Portfolio" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:image" content="https://mehiret-portfolio.vercel.app/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:type" content="image/jpeg" />
 
+    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@lovable_dev" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <meta name="twitter:title" content="Mehiret Abdissa - Junior AI Developer & Prompt Engineer" />
+    <meta name="twitter:description" content="Entry-level AI developer specializing in LLM integration and prompt engineering. Built AI tools that reduced content creation time by 60%." />
+    <meta name="twitter:image" content="https://mehiret-portfolio.vercel.app/og-image.jpg" />
+    <meta name="twitter:creator" content="@mehiretabdissa" />
+
+    <!-- LinkedIn specific -->
+    <meta property="article:author" content="Mehiret Abdissa" />
+    <meta property="profile:first_name" content="Mehiret" />
+    <meta property="profile:last_name" content="Abdissa" />
+    <meta property="profile:username" content="mehiret-abdissa21" />
+
+    <!-- Structured Data for Resume -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Mehiret Abdissa",
+      "jobTitle": "Junior AI Developer & Prompt Engineer",
+      "email": "mercyabdi7@gmail.com",
+      "telephone": "(571) 626-9273",
+      "url": "https://mehiret-portfolio.vercel.app",
+      "sameAs": [
+        "https://www.linkedin.com/in/mehiret-abdissa21",
+        "https://github.com/Mercynow21"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Available Anywhere in USA",
+        "addressCountry": "US"
+      },
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "University/College"
+      },
+      "knowsAbout": [
+        "AI Development",
+        "Prompt Engineering", 
+        "LLM Integration",
+        "Python",
+        "TypeScript",
+        "React",
+        "Next.js"
+      ]
+    }
+    </script>
+
+    <!-- Preload critical resources -->
+    <link rel="preload" href="/src/assets/hero-bg.jpg" as="image" />
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://mehiret-portfolio.vercel.app/" />
   </head>
 
   <body>
-    <div id="root"></div>
+    <!-- Add basic content fallback for better SEO -->
+    <div id="root">
+      <noscript>
+        <div style="padding: 2rem; text-align: center; font-family: system-ui, sans-serif;">
+          <h1>Mehiret Abdissa - Junior AI Developer & Prompt Engineer</h1>
+          <p>Email: mercyabdi7@gmail.com | Phone: (571) 626-9273</p>
+          <p>Available Anywhere in USA</p>
+          <p>Specialized in LLM integration and prompt engineering with practical AI solutions.</p>
+          <p>Please enable JavaScript to view the full resume.</p>
+        </div>
+      </noscript>
+    </div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
