@@ -5,24 +5,24 @@ import { GraduationCap, BookOpen, Award, Target } from "lucide-react";
 const Education = () => {
   const education = [
     {
-      degree: "Bachelor's Degree in Computer Science",
+      degree: "Bachelor's Degree in Marketing and Management",
       institution: "University/College",
       location: "Location",
-      period: "2020 - 2024",
-      status: "Recent Graduate",
+      period: "2012 - 2015",
+      status: "Graduate",
       gpa: "Strong Academic Performance",
-      description: "Focused on software engineering, data structures, algorithms, and emerging technologies with particular interest in artificial intelligence and machine learning.",
+      description: "Comprehensive business education covering marketing strategies, management principles, and business operations with focus on digital transformation and modern business practices.",
       relevantCourses: [
-        "Data Structures & Algorithms",
-        "Database Systems", 
-        "Web Development",
-        "Machine Learning Fundamentals"
+        "Digital Marketing",
+        "Strategic Management", 
+        "Business Analytics",
+        "Consumer Behavior"
       ],
       projects: [
         {
-          name: "Senior Capstone Project",
-          description: "AI-powered application demonstrating practical machine learning implementation",
-          tech: ["Python", "Machine Learning", "Web APIs"]
+          name: "Marketing Strategy Project",
+          description: "Comprehensive digital marketing campaign analysis and strategic planning",
+          tech: ["Market Research", "Analytics", "Digital Strategy"]
         }
       ]
     }
@@ -150,12 +150,12 @@ const Education = () => {
                         <div className="text-sm text-muted-foreground">Academic Standing</div>
                       </div>
                       <div className="text-center">
-                        <div className="text-lg font-bold text-primary mb-1">CS Focus</div>
-                        <div className="text-sm text-muted-foreground">Software Engineering</div>
+                        <div className="text-lg font-bold text-primary mb-1">Marketing Focus</div>
+                        <div className="text-sm text-muted-foreground">Business Strategy</div>
                       </div>
                       <div className="text-center">
-                        <div className="text-lg font-bold text-accent mb-1">AI Interest</div>
-                        <div className="text-sm text-muted-foreground">Emerging Tech</div>
+                        <div className="text-lg font-bold text-accent mb-1">Management</div>
+                        <div className="text-sm text-muted-foreground">Leadership Skills</div>
                       </div>
                     </div>
                   </div>
