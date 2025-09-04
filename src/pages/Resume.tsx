@@ -77,7 +77,7 @@ const Resume = () => {
             <div className="flex items-center gap-3">
               <Button onClick={handlePrint} variant="outline" size="sm">
                 <Download className="h-4 w-4 mr-2" />
-                Download PDF
+                Print / Save as PDF
               </Button>
               <Button onClick={handleCopyLink} variant="outline" size="sm">
                 {copied ? <Check className="h-4 w-4 mr-2" /> : <Copy className="h-4 w-4 mr-2" />}
