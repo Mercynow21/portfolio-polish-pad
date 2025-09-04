@@ -69,8 +69,12 @@ const Resume = () => {
   }, []);
 
   const handlePrint = () => {
-    // Optimize for printing
-    window.print();
+    // Add small delay to ensure styles are loaded
+    setTimeout(() => {
+      // Focus window and trigger print
+      window.focus();
+      window.print();
+    }, 100);
   };
 
   const handleCopyLink = async () => {
