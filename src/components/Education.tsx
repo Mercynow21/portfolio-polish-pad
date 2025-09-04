@@ -11,20 +11,7 @@ const Education = () => {
       period: "2012 - 2015",
       status: "Graduate",
       gpa: "Strong Academic Performance",
-      description: "Comprehensive business education covering marketing strategies, management principles, and business operations with focus on digital transformation and modern business practices.",
-      relevantCourses: [
-        "Digital Marketing",
-        "Strategic Management", 
-        "Business Analytics",
-        "Consumer Behavior"
-      ],
-      projects: [
-        {
-          name: "Marketing Strategy Project",
-          description: "Comprehensive digital marketing campaign analysis and strategic planning",
-          tech: ["Market Research", "Analytics", "Digital Strategy"]
-        }
-      ]
+      description: "Comprehensive business education covering marketing strategies, management principles, and business operations with focus on digital transformation and modern business practices."
     }
   ];
 
@@ -107,36 +94,6 @@ const Education = () => {
                       </div>
                       <p className="text-muted-foreground mb-6">{edu.description}</p>
                     </div>
-                  </div>
-
-                  {/* Relevant Coursework */}
-                  <div className="mb-6">
-                    <h4 className="font-semibold text-foreground mb-4">Relevant Coursework</h4>
-                    <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
-                      {edu.relevantCourses.map((course) => (
-                        <Badge key={course} variant="outline" className="justify-center py-2">
-                          {course}
-                        </Badge>
-                      ))}
-                    </div>
-                  </div>
-
-                  {/* Academic Projects */}
-                  <div>
-                    <h4 className="font-semibold text-foreground mb-4">Notable Academic Projects</h4>
-                    {edu.projects.map((project, i) => (
-                      <div key={i} className="border-l-2 border-primary/30 pl-4 mb-4 last:mb-0">
-                        <h5 className="font-medium text-foreground mb-1">{project.name}</h5>
-                        <p className="text-muted-foreground text-sm mb-2">{project.description}</p>
-                        <div className="flex flex-wrap gap-1">
-                          {project.tech.map((tech) => (
-                            <Badge key={tech} variant="secondary" className="text-xs bg-primary/10 text-primary">
-                              {tech}
-                            </Badge>
-                          ))}
-                        </div>
-                      </div>
-                    ))}
                   </div>
                 </div>
 
