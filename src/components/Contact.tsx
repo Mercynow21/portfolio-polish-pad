@@ -17,8 +17,8 @@ const Contact = () => {
     {
       icon: Linkedin,
       title: "LinkedIn",
-      value: "LinkedIn Profile",
-      href: "https://www.linkedin.com/in/",
+      value: "/in/mehiret-abdissa21",
+      href: "https://www.linkedin.com/in/mehiret-abdissa21",
       description: "Professional network"
     },
     {
