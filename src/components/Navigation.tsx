@@ -2,6 +2,12 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 
+interface NavItem {
+  label: string;
+  href: string;
+  isExternal?: boolean;
+}
+
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -15,7 +21,7 @@ const Navigation = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const navItems = [
+  const navItems: NavItem[] = [
     { label: "About", href: "#about" },
     { label: "Skills", href: "#skills" },
     { label: "Experience", href: "#experience" },
@@ -23,9 +29,15 @@ const Navigation = () => {
     { label: "Projects", href: "#projects" },
     { label: "Achievements", href: "#achievements" },
     { label: "Contact", href: "#contact" },
+    { label: "Resume", href: "/resume", isExternal: true }
   ];
 
-  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string, isExternal?: boolean) => {
+    if (isExternal) {
+      // Let the browser handle external navigation normally
+      return;
+    }
+    
     e.preventDefault();
     const targetId = href.substring(1);
     const targetElement = document.getElementById(targetId);
@@ -63,15 +75,15 @@ const Navigation = () => {
               <a
                 key={item.label}
                 href={item.href}
-                onClick={(e) => handleNavClick(e, item.href)}
+                onClick={(e) => handleNavClick(e, item.href, item.isExternal)}
                 className="text-muted-foreground hover:text-primary transition-colors duration-200 font-medium cursor-pointer"
               >
                 {item.label}
               </a>
             ))}
             <Button variant="hero" size="sm" asChild>
-              <a href="#contact" onClick={(e) => handleNavClick(e, "#contact")}>
-                Resume
+              <a href="/resume">
+                Download Resume
               </a>
             </Button>
           </div>
@@ -95,15 +107,15 @@ const Navigation = () => {
                 <a
                   key={item.label}
                   href={item.href}
-                  onClick={(e) => handleNavClick(e, item.href)}
+                  onClick={(e) => handleNavClick(e, item.href, item.isExternal)}
                   className="text-muted-foreground hover:text-primary transition-colors duration-200 font-medium cursor-pointer"
                 >
                   {item.label}
                 </a>
               ))}
               <Button variant="hero" size="sm" className="self-start" asChild>
-                <a href="#contact" onClick={(e) => handleNavClick(e, "#contact")}>
-                  Resume
+                <a href="/resume">
+                  Download Resume
                 </a>
               </Button>
             </div>

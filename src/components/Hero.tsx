@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowDown, Github, Mail, Linkedin } from "lucide-react";
+import { ArrowDown, Github, Mail, FileText } from "lucide-react";
 import heroImage from "@/assets/hero-bg.jpg";
 
 const Hero = () => {
@@ -33,17 +33,23 @@ const Hero = () => {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12 animate-slide-up">
-          <Button variant="hero" size="lg" className="group">
-            <Mail className="mr-2 h-5 w-5 group-hover:animate-bounce" />
-            Contact Me
+          <Button variant="hero" size="lg" className="group" asChild>
+            <a href="mailto:mehiret.abdissa@email.com">
+              <Mail className="mr-2 h-5 w-5 group-hover:animate-bounce" />
+              Contact Me
+            </a>
           </Button>
-          <Button variant="glass" size="lg" className="group">
-            <Github className="mr-2 h-5 w-5 group-hover:rotate-12 transition-transform" />
-            View GitHub
+          <Button variant="glass" size="lg" className="group" asChild>
+            <a href="https://github.com/mehiret-abdissa" target="_blank" rel="noopener noreferrer">
+              <Github className="mr-2 h-5 w-5 group-hover:rotate-12 transition-transform" />
+              View GitHub
+            </a>
           </Button>
-          <Button variant="outline" size="lg" className="group">
-            <Linkedin className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
-            LinkedIn
+          <Button variant="outline" size="lg" className="group" asChild>
+            <a href="/resume">
+              <FileText className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
+              View Resume
+            </a>
           </Button>
         </div>
 

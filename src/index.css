@@ -175,3 +175,119 @@
     box-shadow: 0 0 20px hsl(var(--accent) / 0.5);
   }
 }
+
+/* Print Styles for Resume */
+@media print {
+  * {
+    -webkit-print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
+
+  @page {
+    margin: 0.75in;
+    size: letter;
+  }
+
+  body {
+    font-size: 12pt;
+    line-height: 1.4;
+    color: #000 !important;
+    background: white !important;
+  }
+
+  /* Hide elements that shouldn't print */
+  .print\:hidden {
+    display: none !important;
+  }
+
+  /* Ensure proper page breaks */
+  .print\:break-before-page {
+    page-break-before: always;
+  }
+
+  .print\:break-inside-avoid {
+    page-break-inside: avoid;
+  }
+
+  .print\:break-after-avoid {
+    page-break-after: avoid;
+  }
+
+  /* Print-specific spacing */
+  .print\:mb-0 { margin-bottom: 0 !important; }
+  .print\:mb-1 { margin-bottom: 0.25rem !important; }
+  .print\:mb-2 { margin-bottom: 0.5rem !important; }
+  .print\:mb-3 { margin-bottom: 0.75rem !important; }
+  .print\:mb-4 { margin-bottom: 1rem !important; }
+  .print\:mb-6 { margin-bottom: 1.5rem !important; }
+
+  .print\:p-0 { padding: 0 !important; }
+  .print\:p-1 { padding: 0.25rem !important; }
+  .print\:p-2 { padding: 0.5rem !important; }
+  .print\:p-3 { padding: 0.75rem !important; }
+  .print\:p-4 { padding: 1rem !important; }
+  .print\:px-0 { padding-left: 0 !important; padding-right: 0 !important; }
+  .print\:py-0 { padding-top: 0 !important; padding-bottom: 0 !important; }
+
+  /* Print typography */
+  .print\:text-xs { font-size: 10pt !important; }
+  .print\:text-sm { font-size: 11pt !important; }
+  .print\:text-base { font-size: 12pt !important; }
+  .print\:text-lg { font-size: 14pt !important; }
+  .print\:text-xl { font-size: 16pt !important; }
+  .print\:text-2xl { font-size: 18pt !important; }
+  .print\:text-3xl { font-size: 20pt !important; }
+
+  /* Print colors - ensure contrast */
+  .print\:text-black { color: #000 !important; }
+  .print\:bg-white { background-color: white !important; }
+  .print\:bg-gray-50 { background-color: #f9fafb !important; }
+  .print\:border-gray-300 { border-color: #d1d5db !important; }
+
+  /* Remove shadows and effects for print */
+  .print\:shadow-none {
+    box-shadow: none !important;
+  }
+
+  /* Ensure proper border visibility */
+  .print\:border {
+    border: 1px solid #e5e7eb !important;
+  }
+
+  /* Print grid adjustments */
+  .print\:grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)) !important; }
+  .print\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+  .print\:grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)) !important; }
+
+  /* Print gap adjustments */
+  .print\:gap-0 { gap: 0 !important; }
+  .print\:gap-1 { gap: 0.25rem !important; }
+  .print\:gap-2 { gap: 0.5rem !important; }
+  .print\:gap-3 { gap: 0.75rem !important; }
+  .print\:gap-4 { gap: 1rem !important; }
+
+  /* Print space adjustments */
+  .print\:space-y-0 > :not([hidden]) ~ :not([hidden]) { margin-top: 0 !important; }
+  .print\:space-y-1 > :not([hidden]) ~ :not([hidden]) { margin-top: 0.25rem !important; }
+  .print\:space-y-2 > :not([hidden]) ~ :not([hidden]) { margin-top: 0.5rem !important; }
+  .print\:space-y-3 > :not([hidden]) ~ :not([hidden]) { margin-top: 0.75rem !important; }
+  .print\:space-y-4 > :not([hidden]) ~ :not([hidden]) { margin-top: 1rem !important; }
+
+  /* Ensure links are visible in print */
+  a {
+    color: #000 !important;
+    text-decoration: none !important;
+  }
+
+  a[href]:after {
+    content: " (" attr(href) ")";
+    font-size: 9pt;
+    color: #666;
+  }
+
+  a[href^="mailto:"]:after,
+  a[href^="tel:"]:after,
+  a[href^="#"]:after {
+    content: "";
+  }
+}
