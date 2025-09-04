@@ -1,9 +1,4 @@
 {
-  "functions": {
-    "app/[[...routes]].tsx": {
-      "maxDuration": 10
-    }
-  },
   "rewrites": [
     {
       "source": "/(.*)",
