@@ -12,7 +12,7 @@ const Projects = () => {
       techStack: ["React", "TypeScript", "Tailwind CSS", "Local Storage"],
       liveUrl: "https://party-planner-ten.vercel.app/",
       githubUrl: "",
-      image: "/api/placeholder/400/240",
+      image: partyPlannerImg,
       status: "Live",
       duration: "3 weeks",
       role: "Solo Developer"
@@ -24,7 +24,7 @@ const Projects = () => {
       techStack: ["Next.js", "OpenAI API", "Supabase", "TypeScript", "Authentication"],
       liveUrl: "https://chatpal-school-buddy.vercel.app/",
       githubUrl: "",
-      image: "/api/placeholder/400/240",
+      image: chatpalImg,
       status: "In Development",
       duration: "4 weeks",
       role: "Solo Developer"
@@ -36,7 +36,7 @@ const Projects = () => {
       techStack: ["React", "Python", "AI Planning", "User Authentication", "Data Analytics"],
       liveUrl: "https://homework-plan-helper-89sli1cs6-mercys-projects-968f0695.vercel.app/",
       githubUrl: "",
-      image: "/api/placeholder/400/240",
+      image: homeworkHelperImg,
       status: "Beta",
       duration: "5 weeks",
       role: "Solo Developer"
