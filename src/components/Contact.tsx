@@ -17,15 +17,15 @@ const Contact = () => {
     {
       icon: Linkedin,
       title: "LinkedIn",
-      value: "/in/mehiret-abdissa",
-      href: "https://www.linkedin.com/in/mehiret-abdissa",
+      value: "LinkedIn Profile",
+      href: "https://www.linkedin.com/in/",
       description: "Professional network"
     },
     {
       icon: Github,
       title: "GitHub",
-      value: "/mehiret-abdissa",
-      href: "https://github.com/mehiret-abdissa",
+      value: "/Mercynow21",
+      href: "https://github.com/Mercynow21",
       description: "View my code"
     },
     {

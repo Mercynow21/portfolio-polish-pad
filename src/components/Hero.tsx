@@ -40,7 +40,7 @@ const Hero = () => {
             </a>
           </Button>
           <Button variant="glass" size="lg" className="group" asChild>
-            <a href="https://github.com/mehiret-abdissa" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/Mercynow21" target="_blank" rel="noopener noreferrer">
               <Github className="mr-2 h-5 w-5 group-hover:rotate-12 transition-transform" />
               View GitHub
             </a>

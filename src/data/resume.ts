@@ -71,8 +71,8 @@ export const resumeData = {
     email: "mercyabdi7@gmail.com",
     phone: "(571) 626-9273",
     location: "Available Anywhere in USA",
-    linkedin: "https://www.linkedin.com/in/mehiret-abdissa",
-    github: "https://github.com/mehiret-abdissa",
+    linkedin: "https://www.linkedin.com/in/",
+    github: "https://github.com/Mercynow21",
     website: "https://mehiret-portfolio.vercel.app"
   } as ContactInfo,
 
