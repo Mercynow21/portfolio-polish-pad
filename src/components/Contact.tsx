@@ -10,8 +10,8 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email",
-      value: "mehiret.abdissa@email.com",
-      href: "mailto:mehiret.abdissa@email.com",
+      value: "mercyabdi7@gmail.com",
+      href: "mailto:mercyabdi7@gmail.com",
       description: "Best way to reach me"
     },
     {
@@ -29,9 +29,16 @@ const Contact = () => {
       description: "View my code"
     },
     {
+      icon: Phone,
+      title: "Phone",
+      value: "(571) 626-9273",
+      href: "tel:5716269273",
+      description: "Direct contact"
+    },
+    {
       icon: MapPin,
       title: "Location",
-      value: "Available Remote",
+      value: "Available Anywhere in USA",
       href: "#",
       description: "Open to opportunities"
     }
