@@ -93,7 +93,7 @@ export const resumeData = {
       type: "Solo Developer",
       location: "Remote",
       duration: "6 weeks",
-      period: "2024",
+      period: "July 2024 - August 2024",
       description: "Built a comprehensive AI-powered content generation and optimization tool that revolutionized content creation workflows.",
       achievements: [
         "Reduced content creation time by 60% through intelligent prompt engineering",
