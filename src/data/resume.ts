@@ -93,7 +93,7 @@ export const resumeData = {
       type: "Solo Developer",
       location: "Remote",
       duration: "6 weeks",
-      period: "July 2024 - August 2024",
+      period: "July 2025 - August 2025",
       description: "Built a comprehensive AI-powered content generation and optimization tool that revolutionized content creation workflows.",
       achievements: [
         "Reduced content creation time by 60% through intelligent prompt engineering",
@@ -203,19 +203,19 @@ export const resumeData = {
     {
       title: "AI Content Assistant Success",
       description: "Built production-ready AI tool that reduced content creation time by 60%",
-      period: "2024",
+      period: "2025",
       type: "Technical Excellence"
     },
     {
       title: "Full-Stack Application Portfolio", 
       description: "Developed and deployed multiple applications with modern tech stack",
-      period: "2024",
+      period: "2025",
       type: "Technical Excellence"
     },
     {
       title: "Self-Directed Learning Excellence",
       description: "Demonstrated ability to rapidly acquire new technologies and implement them effectively",
-      period: "2024",
+      period: "2025",
       type: "Professional Development"
     }
   ] as Achievement[],
@@ -224,7 +224,7 @@ export const resumeData = {
     {
       title: "AI & Machine Learning Fundamentals",
       type: "Self-Directed Learning",
-      period: "2024",
+      period: "2025",
       skills: ["LLM Integration", "Prompt Engineering", "API Development"],
       description: "Intensive study of AI fundamentals with practical implementation focus"
     },
