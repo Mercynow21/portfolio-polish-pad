@@ -393,6 +393,48 @@ const Resume = () => {
           </div>
         </section>
 
+        {/* Continuous Learning & Development */}
+        <section className="mb-8 print:mb-6">
+          <h2 className="text-2xl font-bold text-foreground mb-4 border-b-2 border-primary pb-2 print:text-xl print:mb-3">
+            Continuous Learning & Development
+          </h2>
+          <div className="space-y-4 print:space-y-3">
+            {resumeData.continuousLearning.map((learning, index) => (
+              <Card key={learning.title} className="p-6 print:p-4 print:shadow-none print:border print:border-gray-300">
+                <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-2">
+                  <div>
+                    <h3 className="text-lg font-bold text-foreground print:text-base">
+                      {learning.title}
+                    </h3>
+                    <div className="text-primary font-medium print:text-sm">
+                      {learning.type}
+                    </div>
+                  </div>
+                  <div className="text-sm text-muted-foreground mt-1 sm:mt-0 print:text-xs">
+                    <Badge variant="secondary" className="bg-accent/20 text-accent text-xs print:text-xs">
+                      {learning.period}
+                    </Badge>
+                  </div>
+                </div>
+                <p className="text-muted-foreground mb-3 print:mb-2 print:text-sm">
+                  {learning.description}
+                </p>
+                <div className="flex flex-wrap gap-2 print:gap-1">
+                  {learning.skills.map((skill) => (
+                    <Badge 
+                      key={skill} 
+                      variant="outline" 
+                      className="text-xs print:text-xs print:px-1 print:py-0.5"
+                    >
+                      {skill}
+                    </Badge>
+                  ))}
+                </div>
+              </Card>
+            ))}
+          </div>
+        </section>
+
         {/* Achievements & Certifications */}
         <section className="mb-8 print:mb-6">
           <h2 className="text-2xl font-bold text-foreground mb-4 border-b-2 border-primary pb-2 print:text-xl print:mb-3">

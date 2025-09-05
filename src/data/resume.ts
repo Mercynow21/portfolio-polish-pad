@@ -64,6 +64,14 @@ export interface Achievement {
   type: string;
 }
 
+export interface ContinuousLearning {
+  title: string;
+  type: string;
+  period: string;
+  skills: string[];
+  description: string;
+}
+
 export const resumeData = {
   contact: {
     name: "Mehiret Abdissa",
@@ -211,6 +219,23 @@ export const resumeData = {
       type: "Professional Development"
     }
   ] as Achievement[],
+
+  continuousLearning: [
+    {
+      title: "AI & Machine Learning Fundamentals",
+      type: "Self-Directed Learning",
+      period: "2024",
+      skills: ["LLM Integration", "Prompt Engineering", "API Development"],
+      description: "Intensive study of AI fundamentals with practical implementation focus"
+    },
+    {
+      title: "Modern Web Development",
+      type: "Industry Practice",
+      period: "July 2024 - Present",
+      skills: ["React", "TypeScript"],
+      description: "Hands-on learning through real-world project development"
+    }
+  ] as ContinuousLearning[],
 
   keyMetrics: {
     timeReduction: "60%",
