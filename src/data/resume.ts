@@ -231,7 +231,7 @@ export const resumeData = {
     {
       title: "Modern Web Development",
       type: "Industry Practice",
-      period: "July 2024 - Present",
+      period: "July 2025 - Present",
       skills: ["React", "TypeScript"],
       description: "Hands-on learning through real-world project development"
     }
