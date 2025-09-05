@@ -110,7 +110,7 @@ export const resumeData = {
       type: "Solo Developer", 
       location: "Remote",
       duration: "Ongoing",
-      period: "2024",
+      period: "July 2024 - Present",
       description: "Developed multiple web applications focusing on practical solutions for education, event planning, and productivity.",
       achievements: [
         "Built Party Planner Pro with budget tracking and allergy-aware suggestions",
