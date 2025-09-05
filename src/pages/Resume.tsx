@@ -14,6 +14,7 @@ import {
   Check
 } from "lucide-react";
 import { resumeData } from "@/data/resume";
+import type { ContinuousLearning } from "@/data/resume";
 import { useState } from "react";
 
 const Resume = () => {
